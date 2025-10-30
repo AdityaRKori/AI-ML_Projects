@@ -1,0 +1,9 @@
+streamlit
+tensorflow
+librosa
+numpy
+# Removed: streamlit-webrtc
+pydub
+simplejson
+matplotlib
+seaborn
