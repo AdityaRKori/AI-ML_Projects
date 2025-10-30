@@ -2,3 +2,8 @@ streamlit
 tensorflow
 librosa
 numpy
+streamlit-webrtc
+pydub
+simplejson
+matplotlib
+seaborn
