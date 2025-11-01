@@ -1,0 +1,5 @@
+names:
+- Fall
+nc: 1
+train: /kaggle/input/fall-detection-dataset/fall_dataset/images/train
+val: /kaggle/input/fall-detection-dataset/fall_dataset/images/val
