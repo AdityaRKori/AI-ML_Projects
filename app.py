@@ -14,7 +14,7 @@ def load_model():
 
     # ✅ Google Drive direct download link (replace YOUR_ID with your file ID)
     # You will need to replace "YOUR_FILE_ID" with the actual file ID of your model in Google Drive.
-    url = "https://drive.google.com/uc?export=download&id=YOUR_FILE_ID"
+    url = "https://drive.google.com/uc?export=download&id=1wNgEGKBs6_t-IftXAxIT99ZZw9G5uVLS"
 
     # Download model if not already present
     if not os.path.exists(model_path):
