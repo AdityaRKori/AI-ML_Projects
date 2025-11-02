@@ -4,14 +4,30 @@ import tensorflow as tf
 import numpy as np
 import cv2
 from PIL import Image
+import gdown
+import os
 
 # Load the saved model
 @st.cache_resource # Cache the model to avoid reloading on each interaction
 def load_model():
-    model = tf.keras.models.load_model('heart_segmentation_model.h5')
+    model_path = "heart_segmentation_model.h5"
+
+    # ✅ Google Drive direct download link (replace YOUR_ID with your file ID)
+    # You will need to replace "YOUR_FILE_ID" with the actual file ID of your model in Google Drive.
+    url = "https://drive.google.com/uc?export=download&id=YOUR_FILE_ID"
+
+    # Download model if not already present
+    if not os.path.exists(model_path):
+        with st.spinner("Downloading model from Google Drive..."):
+            gdown.download(url, model_path, quiet=False)
+
+    # Load model
+    model = tf.keras.models.load_model(model_path)
     return model
 
+# Load model once
 model = load_model()
+st.success("Model loaded successfully ✅")
 
 st.title("Heart (Atrial) Segmentation")
 
